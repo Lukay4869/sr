@@ -1,4 +1,4 @@
-package com.guigu.common.result;
+package com.guigu.srb.common.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
