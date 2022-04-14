@@ -1,4 +1,4 @@
-package com.guigu.srb.common.result;
+package com.guigu.common.result;
 
 import lombok.Data;
 

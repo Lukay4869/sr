@@ -1,7 +1,9 @@
 package com.guigu.srb.core.controller.admin;
 
 
-import com.guigu.srb.common.result.R;
+import com.guigu.common.exception.BusinessException;
+import com.guigu.common.result.R;
+import com.guigu.common.result.ResponseEnum;
 import com.guigu.srb.core.entity.IntegralGrade;
 import com.guigu.srb.core.service.IntegralGradeService;
 import io.swagger.annotations.Api;
@@ -54,6 +56,9 @@ public class AdminIntegralGradeController {
     public R save(
             @ApiParam(value = "积分等级对象",required = true)
            @RequestBody IntegralGrade integralGrade){
+        if (integralGrade.getBorrowAmount() == null){
+throw new  BusinessException(ResponseEnum.BORROW_AMOUNT_NULL_ERROR);
+        }
         boolean save = integralGradeService.save(integralGrade);
         if (save){
           return   R.ok().message("保存成功");
