@@ -73,9 +73,9 @@ throw new  BusinessException(ResponseEnum.BORROW_AMOUNT_NULL_ERROR);
     public R getById(@ApiParam(value = "想要查询的id",required = true,example = "1")
                      @PathVariable Long id
                      ){
-        IntegralGrade byId = integralGradeService.getById(id);
-        if (byId != null){
-           return R.ok().message("获取数据成功");
+        IntegralGrade integralGrade = integralGradeService.getById(id);
+        if (integralGrade != null){
+           return R.ok().data("record",integralGrade);
         }else {
            return R.error().message("没有该数据");
         }
