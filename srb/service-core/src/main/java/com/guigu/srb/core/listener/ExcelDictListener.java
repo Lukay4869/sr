@@ -2,6 +2,7 @@ package com.guigu.srb.core.listener;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
+import com.guigu.srb.core.mapper.DictMapper;
 import com.guigu.srb.core.pojo.dto.ExcelDictDTO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,6 +11,14 @@ import java.util.List;
 
 @Slf4j
 public class ExcelDictListener extends AnalysisEventListener<ExcelDictDTO> {
+    private DictMapper dictMapper;
+
+    //由于这个类没有Component注解，没有自动的被Spring管理，所以这个地方如果使用Resource注解，引入mapper是不行的，需要在类中定义mapper，然后用构造函数注入
+
+
+    public ExcelDictListener(DictMapper dictMapper) {
+        this.dictMapper = dictMapper;
+    }
 
     //数据列表
     private List<ExcelDictDTO> list = new ArrayList<>();
@@ -36,7 +45,8 @@ public class ExcelDictListener extends AnalysisEventListener<ExcelDictDTO> {
     }
     private void saveData(){
         log.info("{}条数据被存储到数据库",list.size());
-        //调用mapper层的save方法save list对象
+        //调用mapper层的批量save方法：save list对象
+        dictMapper.insertBatch(list);
         log.info("数据被存储到数据库成功",list.size());
     }
 }

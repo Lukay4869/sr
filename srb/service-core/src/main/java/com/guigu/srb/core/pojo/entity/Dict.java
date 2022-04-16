@@ -1,15 +1,16 @@
 package com.guigu.srb.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -52,6 +53,10 @@ public class Dict implements Serializable {
     @TableField("is_deleted")
     @TableLogic
     private Boolean deleted;
+
+
+    @TableField(exist = false)//表达逻辑概念的属性，和物理表没有关系，这个字段在表里不存在
+    private boolean hasChildren;
 
 
 }
