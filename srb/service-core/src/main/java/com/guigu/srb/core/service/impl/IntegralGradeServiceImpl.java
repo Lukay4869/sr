@@ -1,6 +1,6 @@
 package com.guigu.srb.core.service.impl;
 
-import com.guigu.srb.core.entity.IntegralGrade;
+import com.guigu.srb.core.pojo.entity.IntegralGrade;
 import com.guigu.srb.core.mapper.IntegralGradeMapper;
 import com.guigu.srb.core.service.IntegralGradeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

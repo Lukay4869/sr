@@ -1,6 +1,6 @@
 package com.guigu.srb.core.service.impl;
 
-import com.guigu.srb.core.entity.Borrower;
+import com.guigu.srb.core.pojo.entity.Borrower;
 import com.guigu.srb.core.mapper.BorrowerMapper;
 import com.guigu.srb.core.service.BorrowerService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,6 +1,6 @@
 package com.guigu.srb.core.service.impl;
 
-import com.guigu.srb.core.entity.UserAccount;
+import com.guigu.srb.core.pojo.entity.UserAccount;
 import com.guigu.srb.core.mapper.UserAccountMapper;
 import com.guigu.srb.core.service.UserAccountService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

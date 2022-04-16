@@ -4,7 +4,7 @@ package com.guigu.srb.core.controller.admin;
 import com.guigu.common.exception.BusinessException;
 import com.guigu.common.result.R;
 import com.guigu.common.result.ResponseEnum;
-import com.guigu.srb.core.entity.IntegralGrade;
+import com.guigu.srb.core.pojo.entity.IntegralGrade;
 import com.guigu.srb.core.service.IntegralGradeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

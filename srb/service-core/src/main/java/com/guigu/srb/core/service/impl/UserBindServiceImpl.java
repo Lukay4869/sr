@@ -1,6 +1,6 @@
 package com.guigu.srb.core.service.impl;
 
-import com.guigu.srb.core.entity.UserBind;
+import com.guigu.srb.core.pojo.entity.UserBind;
 import com.guigu.srb.core.mapper.UserBindMapper;
 import com.guigu.srb.core.service.UserBindService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

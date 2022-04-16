@@ -1,6 +1,6 @@
 package com.guigu.srb.core.mapper;
 
-import com.guigu.srb.core.entity.BorrowerAttach;
+import com.guigu.srb.core.pojo.entity.BorrowerAttach;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

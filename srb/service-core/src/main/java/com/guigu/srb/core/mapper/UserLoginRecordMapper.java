@@ -1,6 +1,6 @@
 package com.guigu.srb.core.mapper;
 
-import com.guigu.srb.core.entity.UserLoginRecord;
+import com.guigu.srb.core.pojo.entity.UserLoginRecord;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

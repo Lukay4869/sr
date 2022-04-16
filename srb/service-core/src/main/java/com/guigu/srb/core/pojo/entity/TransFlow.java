@@ -1,4 +1,4 @@
-package com.guigu.srb.core.entity;
+package com.guigu.srb.core.pojo.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 借款信息表
+ * 交易流水表
  * </p>
  *
  * @author magic
@@ -22,8 +22,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="BorrowInfo对象", description="借款信息表")
-public class BorrowInfo implements Serializable {
+@ApiModel(value="TransFlow对象", description="交易流水表")
+public class TransFlow implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,26 +31,26 @@ public class BorrowInfo implements Serializable {
       @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "借款用户id")
+    @ApiModelProperty(value = "用户id")
     private Long userId;
 
-    @ApiModelProperty(value = "借款金额")
-    private BigDecimal amount;
+    @ApiModelProperty(value = "用户名称")
+    private String userName;
 
-    @ApiModelProperty(value = "借款期限")
-    private Integer period;
+    @ApiModelProperty(value = "交易单号")
+    private String transNo;
 
-    @ApiModelProperty(value = "年化利率")
-    private BigDecimal borrowYearRate;
+    @ApiModelProperty(value = "交易类型（1：充值 2：提现 3：投标 4：投资回款 ...）")
+    private Integer transType;
 
-    @ApiModelProperty(value = "还款方式 1-等额本息 2-等额本金 3-每月还息一次还本 4-一次还本")
-    private Integer returnMethod;
+    @ApiModelProperty(value = "交易类型名称")
+    private String transTypeName;
 
-    @ApiModelProperty(value = "资金用途")
-    private Integer moneyUse;
+    @ApiModelProperty(value = "交易金额")
+    private BigDecimal transAmount;
 
-    @ApiModelProperty(value = "状态（0：未提交，1：审核中， 2：审核通过， -1：审核不通过）")
-    private Integer status;
+    @ApiModelProperty(value = "备注")
+    private String memo;
 
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;

@@ -1,6 +1,6 @@
 package com.guigu.srb.core.service.impl;
 
-import com.guigu.srb.core.entity.UserInfo;
+import com.guigu.srb.core.pojo.entity.UserInfo;
 import com.guigu.srb.core.mapper.UserInfoMapper;
 import com.guigu.srb.core.service.UserInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

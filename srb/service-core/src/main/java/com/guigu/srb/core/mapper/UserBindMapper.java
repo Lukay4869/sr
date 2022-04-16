@@ -1,6 +1,6 @@
 package com.guigu.srb.core.mapper;
 
-import com.guigu.srb.core.entity.UserBind;
+import com.guigu.srb.core.pojo.entity.UserBind;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
