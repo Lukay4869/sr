@@ -28,10 +28,10 @@ public class ExcelDictListener extends AnalysisEventListener<ExcelDictDTO> {
 
     @Override
     public void invoke(ExcelDictDTO data, AnalysisContext context) {
-        log.info("解析到一条数据" + data);
+        log.info("解析到一条数据" , data);
         //将数据存入数据列表
         list.add(data);
-        if (BATCH_COUNT>=5){
+        if (list.size()>=BATCH_COUNT){
             saveData();
             list.clear();
         }

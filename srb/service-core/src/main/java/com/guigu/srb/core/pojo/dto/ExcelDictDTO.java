@@ -7,7 +7,7 @@ import lombok.Data;
 public class ExcelDictDTO {
     @ExcelProperty("id")
     private Long id;
-    @ExcelProperty
+    @ExcelProperty("父级id")
     private Long parentId;
     @ExcelProperty("名称")
     private String name;

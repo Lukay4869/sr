@@ -41,7 +41,7 @@ public class AdminIntegralGradeController {
     @ApiOperation(value = "根据id删除记录",notes = "逻辑删除数据")
     @DeleteMapping("/delete/{id}")
     public R deleteById(
-            @ApiParam(value = "数据id",example = "例子")//参数级别的注解
+            @ApiParam(value = "数据id",example = "1")//参数级别的注解
             @PathVariable Long id){
         boolean result = integralGradeService.removeById(id);
         if (result){
