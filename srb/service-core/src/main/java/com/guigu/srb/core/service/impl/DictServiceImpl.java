@@ -62,7 +62,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             boolean hasChildren = this.hasChildren(dict.getId());
             dict.setHasChildren(hasChildren);
         });
-        return null;
+        return dictList;
     }
 
     //判断当前id的下级是否有子节点
